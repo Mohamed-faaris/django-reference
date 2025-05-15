@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Student List</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Students</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Dept</th>
-        <th>Roll</th>
-        <th>Age</th>
-        <th>Email</th>
-      </tr>
-      {% for student in students %}
-      <tr>
-        <td>{{ student.name }}</td>
-        <td>{{ student.dept }}</td>
-        <td>{{ student.roll }}</td>
-        <td>{{ student.age }}</td>
-        <td>{{ student.email }}</td>
-      </tr>
-      {% endfor %}
-    </table>
-    <a href="/">Back to Form</a>
+    <div class="container mt-5">
+      <h1 class="mb-4">Student List</h1>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th style="width: 140px;">Name</th>
+            <th style="width: 120px;">Dept</th>
+            <th style="width: 100px;">Roll</th>
+            <th style="width: 80px;">Age</th>
+            <th style="width: 200px;">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for student in students %}
+          <tr>
+            <td><p class="mb-0">{{ student.name }}</p></td>
+            <td><p class="mb-0">{{ student.dept }}</p></td>
+            <td><p class="mb-0">{{ student.roll }}</p></td>
+            <td><p class="mb-0">{{ student.age }}</p></td>
+            <td><p class="mb-0">{{ student.email }}</p></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <a href="/" class="btn btn-link mt-3">Back to Form</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
