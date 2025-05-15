@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+.eggs/
+*.egg
+
+# Django
+db.sqlite3
+*.log
+
+# VS Code
+.vscode/
+
+# Environments
+.env
+.venv/
+venv/
+ENV/
+
+# Migrations
+*/migrations/__pycache__/
+*/migrations/*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Others
+*.bak
+*.swp
+*.swo
+.idea/
