@@ -24,6 +24,9 @@ db.sqlite3
 venv/
 ENV/
 
+# Django collectstatic output
+staticfiles/
+
 # Migrations
 */migrations/__pycache__/
 */migrations/*.pyc
