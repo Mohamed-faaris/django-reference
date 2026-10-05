@@ -12,6 +12,8 @@ Before starting, make sure you have Django installed. Run:
 pip install django
 ```
 
+> Recommended: this repo is managed with [uv](https://docs.astral.sh/uv/). Instead of `pip install`, just run `uv sync` — see the footnote [Running with uv](#-footnote-running-with-uv) for all common commands.
+
 ---
 
 ## 📁 Project Structure
@@ -264,5 +266,28 @@ To enhance the appearance of your forms and tables, you can include [Bootstrap](
 - Optionally, update your HTML structure to use Bootstrap classes for better layout and styling.
 
 This step is optional but will make your app look more modern and user-friendly.
+
+---
+
+## 📌 Footnote: Running with uv
+
+[uv](https://docs.astral.sh/uv/) is a fast Python package and project manager (install, lock, sync, and run — one binary).
+
+**Why uv over `pip` + `pip freeze`?**
+
+- `pip freeze` captures whatever happens to be installed (transitive deps, junk, unpinned versions) — not reproducible.
+- uv writes a real lockfile (`uv.lock`): exact versions + hashes, so `uv sync` gives everyone the same env.
+- uv manages the `.venv` for you — no manual `python -m venv` / `activate` dance.
+- One tool for add/remove/sync/run, and it's much faster.
+
+**Common commands (run from the repo root):**
+
+```bash
+uv sync                                        # install locked deps into .venv
+uv run python myproject/manage.py migrate      # apply migrations
+uv run python myproject/manage.py runserver    # start dev server
+uv run python myproject/manage.py test         # run tests
+uv add django==5.2.1                           # add/pin a dependency
+```
 
 ---
