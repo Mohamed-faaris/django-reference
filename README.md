@@ -212,6 +212,14 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
+### 9b. (Optional) Load seed data
+
+```bash
+python manage.py loaddata students
+```
+
+Loads 5 sample students (see `studentForm/fixtures/students.json`). With uv: `uv run python myproject/manage.py loaddata students`.
+
 ---
 
 ### 10. Run the Server

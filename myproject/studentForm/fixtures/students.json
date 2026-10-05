@@ -1,0 +1,62 @@
+[
+  {
+    "model": "studentForm.student",
+    "pk": 1,
+    "fields": {
+      "name": "Viswa Guru Prasath",
+      "dept": "CSE",
+      "roll": "2024CS001",
+      "age": 20,
+      "email": "viswa.guru@example.com",
+      "phone": "+91 93843 76545"
+    }
+  },
+  {
+    "model": "studentForm.student",
+    "pk": 2,
+    "fields": {
+      "name": "Ananya Sharma",
+      "dept": "ECE",
+      "roll": "2024EC014",
+      "age": 19,
+      "email": "ananya.sharma@example.com",
+      "phone": "+91 98410 22334"
+    }
+  },
+  {
+    "model": "studentForm.student",
+    "pk": 3,
+    "fields": {
+      "name": "Rahul Verma",
+      "dept": "MECH",
+      "roll": "2023ME042",
+      "age": 21,
+      "email": "rahul.verma@example.com",
+      "phone": "+91 97102 88990"
+    }
+  },
+  {
+    "model": "studentForm.student",
+    "pk": 4,
+    "fields": {
+      "name": "Priya Nair",
+      "dept": "CSE",
+      "roll": "2024CS037",
+      "age": 20,
+      "email": "priya.nair@example.com",
+      "phone": "+91 95660 11223"
+    }
+  },
+  {
+    "model": "studentForm.student",
+    "pk": 5,
+    "fields": {
+      "name": "Arjun Mehta",
+      "dept": "IT",
+      "roll": "2023IT008",
+      "age": 22,
+      "email": "arjun.mehta@example.com",
+      "phone": "+91 90031 44556"
+    }
+  }
+]
