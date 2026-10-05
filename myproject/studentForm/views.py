@@ -9,7 +9,7 @@ import vobject
 from .forms import StudentForm
 from .models import Student
 
-CSV_FIELDS = ['name', 'dept', 'roll', 'age', 'email']
+CSV_FIELDS = ['name', 'dept', 'roll', 'age', 'email', 'phone']
 
 def student_form(request):
     if request.method == 'POST':
@@ -33,6 +33,8 @@ def export_vcards(request):
         card.add('fn').value = student.name
         card.add('n').value = vobject.vcard.Name(family=student.name)
         card.add('email').value = student.email
+        if student.phone:
+            card.add('tel').value = student.phone
         card.add('note').value = (
             f'Dept: {student.dept}; Roll: {student.roll}; Age: {student.age}'
         )
@@ -53,6 +55,7 @@ def export_csv(request):
             'roll': student.roll,
             'age': student.age,
             'email': student.email,
+            'phone': student.phone,
         })
     return response
 
